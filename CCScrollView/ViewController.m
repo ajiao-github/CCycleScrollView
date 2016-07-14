@@ -40,10 +40,13 @@
                         @"http://img1.c.yinyuetai.com/others/admin/160712/0/-M-acd533e089f8e74b8ef1834c8e077b21_0x0.jpg",
                         @"http://img1.c.yinyuetai.com/others/admin/160712/0/-M-5000b25aa304f51066e8d58033a59bd3_0x0.jpg"];
     
-//    NSArray *localImgArr = @[@"0.jpg",@"1.jpg",@"2.jpg",@"3.jpg"];
-    
     LVScrollView *lvScrollView = [[LVScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150) withAnimationDuration:1 withLoacalImage:NO withImageArr:imgArr andWithPlaceHoldImage:nil];
     [self.view addSubview:lvScrollView];
+    
+    
+    NSArray *localImgArr = @[@"0.jpg",@"1.jpg",@"2.jpg",@"3.jpg"];
+    LVScrollView *loacalScrollView = [[LVScrollView alloc]initWithFrame:CGRectMake(0, 200, SCREEN_WIDTH, 150) withAnimationDuration:2 withLoacalImage:YES withImageArr:localImgArr andWithPlaceHoldImage:nil];
+    [self.view addSubview:loacalScrollView];
 }
 
 - (void)didReceiveMemoryWarning {

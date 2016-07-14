@@ -32,7 +32,7 @@
 		E14F45491D3766A5001B030F /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F45361D3766A5001B030F /* UIImageView+HighlightedWebCache.m */; };
 		E14F454A1D3766A5001B030F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F45381D3766A5001B030F /* UIImageView+WebCache.m */; };
 		E14F454B1D3766A5001B030F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F453A1D3766A5001B030F /* UIView+WebCacheOperation.m */; };
-		E14F45521D379AD5001B030F /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F45511D379AD5001B030F /* demo.gif */; };
+		E14F45541D379DD6001B030F /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = E14F45531D379DD6001B030F /* demo.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +102,7 @@
 		E14F45381D3766A5001B030F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		E14F45391D3766A5001B030F /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		E14F453A1D3766A5001B030F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
-		E14F45511D379AD5001B030F /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
+		E14F45531D379DD6001B030F /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,7 +253,7 @@
 		E14F454E1D379AC3001B030F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				E14F45511D379AD5001B030F /* demo.gif */,
+				E14F45531D379DD6001B030F /* demo.gif */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -363,7 +363,7 @@
 			files = (
 				E14F44F41D37668D001B030F /* LaunchScreen.storyboard in Resources */,
 				E14F44F11D37668D001B030F /* Assets.xcassets in Resources */,
-				E14F45521D379AD5001B030F /* demo.gif in Resources */,
+				E14F45541D379DD6001B030F /* demo.gif in Resources */,
 				E14F453C1D3766A5001B030F /* LICENSE in Resources */,
 				E14F44EF1D37668D001B030F /* Main.storyboard in Resources */,
 			);
