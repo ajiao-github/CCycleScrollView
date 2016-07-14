@@ -42,7 +42,7 @@
     
 //    NSArray *localImgArr = @[@"0.jpg",@"1.jpg",@"2.jpg",@"3.jpg"];
     
-    LVScrollView *lvScrollView = [[LVScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150) withAnimationDuration:0 withLoacalImage:NO withImageArr:imgArr andWithPlaceHoldImage:nil];
+    LVScrollView *lvScrollView = [[LVScrollView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150) withAnimationDuration:1 withLoacalImage:NO withImageArr:imgArr andWithPlaceHoldImage:nil];
     [self.view addSubview:lvScrollView];
 }
 
