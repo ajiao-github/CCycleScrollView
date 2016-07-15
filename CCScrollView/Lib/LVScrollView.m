@@ -18,7 +18,7 @@
  */
 
 #import "LVScrollView.h"
-#import "UIImageView+WebCache.h"
+#import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
 
 @interface LVScrollView () <UIScrollViewDelegate>
 {
