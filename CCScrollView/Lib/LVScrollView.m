@@ -183,6 +183,16 @@
 //        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
 //        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
 //        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
+        
+        NSData *pageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[page]]];
+        self.centerImageView.image = [UIImage imageWithData:pageData];
+        
+        NSData *preData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[pre]]];
+        self.leftImageView.image = [UIImage imageWithData:preData];
+
+        NSData *lastData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[last]]];
+        self.rightImageView.image = [UIImage imageWithData:lastData];
+
     }
 }
 
