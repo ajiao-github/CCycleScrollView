@@ -18,7 +18,7 @@
  */
 
 #import "LVScrollView.h"
-#import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
+//#import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
 
 @interface LVScrollView () <UIScrollViewDelegate>
 {
@@ -180,9 +180,9 @@
         
     } else {
         
-        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
-        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
-        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
+//        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
+//        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
+//        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
     }
 }
 
