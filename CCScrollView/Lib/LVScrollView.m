@@ -17,8 +17,17 @@
  *********************************************************************************
  */
 
+/**
+ *  思路：是不是首先把scrollView的contentoffset默认成（320，0），但是取图片的时候取的是第一张，然后滑动的时候，取图片的下一张，然后赶紧把contentoffset重置成（320，0）
+ *
+ *  定时器。
+ CGPoint newOffset = CGPointMake(2 * CGRectGetWidth(self.scrollView.frame), self.scrollView.contentOffset.y);
+ [self.scrollView setContentOffset:newOffset animated:YES];
+ 滑动完了之后会把setContentOffset:设置成320，0
+ */
+
 #import "LVScrollView.h"
-//#import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
+#import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
 
 @interface LVScrollView () <UIScrollViewDelegate>
 {
@@ -65,6 +74,11 @@
         [self.scrollView addSubview:self.leftImageView];
         [self.scrollView addSubview:self.centerImageView];
         [self.scrollView addSubview:self.rightImageView];
+        
+        self.leftImageView.image = [UIImage imageNamed:@"0"];
+        self.centerImageView.image = [UIImage imageNamed:@"0"];
+        self.rightImageView.image = [UIImage imageNamed:@"0"];
+
         
         [self initPageControl];
         
@@ -180,19 +194,30 @@
         
     } else {
         
-//        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
-//        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
-//        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
+        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
+        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
+        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
         
-        NSData *pageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[page]]];
-        self.centerImageView.image = [UIImage imageWithData:pageData];
-        
-        NSData *preData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[pre]]];
-        self.leftImageView.image = [UIImage imageWithData:preData];
-
-        NSData *lastData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[last]]];
-        self.rightImageView.image = [UIImage imageWithData:lastData];
-
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            NSData *pageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[page]]];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                self.centerImageView.image = [UIImage imageWithData:pageData];
+//            });
+//        });
+//        
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            NSData *preData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[pre]]];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                self.leftImageView.image = [UIImage imageWithData:preData];
+//            });
+//        });
+//        
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            NSData *lastData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[last]]];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                self.rightImageView.image = [UIImage imageWithData:lastData];
+//            });
+//        });
     }
 }
 
