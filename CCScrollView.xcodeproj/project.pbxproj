@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B57F92A58C383363D1DC98C /* Pods_CCScrollView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CC48976A510FD4DA06222D0 /* Pods_CCScrollView.framework */; };
 		E14F44E61D37668D001B030F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F44E51D37668D001B030F /* main.m */; };
 		E14F44E91D37668D001B030F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F44E81D37668D001B030F /* AppDelegate.m */; };
 		E14F44EC1D37668D001B030F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E14F44EB1D37668D001B030F /* ViewController.m */; };
@@ -37,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0070324C3A8A1B23DAD41281 /* Pods-CCScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCScrollView/Pods-CCScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		0E6DC3383937260D130AFC1D /* Pods-CCScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCScrollView/Pods-CCScrollView.release.xcconfig"; sourceTree = "<group>"; };
+		2CC48976A510FD4DA06222D0 /* Pods_CCScrollView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCScrollView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F44E11D37668D001B030F /* CCScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E14F44E51D37668D001B030F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E14F44E71D37668D001B030F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B57F92A58C383363D1DC98C /* Pods_CCScrollView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +88,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F326BC80AB0F7279A359491 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CC48976A510FD4DA06222D0 /* Pods_CCScrollView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DCD1FAB4C831A20867A27DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0070324C3A8A1B23DAD41281 /* Pods-CCScrollView.debug.xcconfig */,
+				0E6DC3383937260D130AFC1D /* Pods-CCScrollView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E14F44D81D37668D001B030F = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +112,8 @@
 				E14F44FD1D37668E001B030F /* CCScrollViewTests */,
 				E14F45081D37668E001B030F /* CCScrollViewUITests */,
 				E14F44E21D37668D001B030F /* Products */,
+				3DCD1FAB4C831A20867A27DA /* Pods */,
+				1F326BC80AB0F7279A359491 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E14F450E1D37668E001B030F /* Build configuration list for PBXNativeTarget "CCScrollView" */;
 			buildPhases = (
+				B5B8B3E7533A0741AC1C553B /* [CP] Check Pods Manifest.lock */,
 				E14F44DD1D37668D001B030F /* Sources */,
 				E14F44DE1D37668D001B030F /* Frameworks */,
 				E14F44DF1D37668D001B030F /* Resources */,
+				C234D3A2E7368E49993D3B48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -289,6 +315,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5B8B3E7533A0741AC1C553B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CCScrollView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C234D3A2E7368E49993D3B48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CCScrollView/Pods-CCScrollView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCScrollView/Pods-CCScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E14F44DD1D37668D001B030F /* Sources */ = {
@@ -437,6 +502,7 @@
 		};
 		E14F450F1D37668E001B030F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0070324C3A8A1B23DAD41281 /* Pods-CCScrollView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CCScrollView/Info.plist;
@@ -448,6 +514,7 @@
 		};
 		E14F45101D37668E001B030F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E6DC3383937260D130AFC1D /* Pods-CCScrollView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CCScrollView/Info.plist;

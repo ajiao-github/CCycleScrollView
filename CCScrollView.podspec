@@ -13,7 +13,8 @@ s.source           = { :git => "https://github.com/ajiao-github/CCycleScrollView
 s.platform     = :ios, '7.0'
 s.requires_arc = true
 
-s.source_files = 'CCScrollView/Lib/*'
+s.source_files = "CCScrollView/Lib/**/*"
 
 s.frameworks = 'UIKit'
+s.dependency "SDWebImage", "~> 4.4.2"
 end

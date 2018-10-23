@@ -27,6 +27,7 @@
  */
 
 #import "LVScrollView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface LVScrollView () <UIScrollViewDelegate>
 {
@@ -193,9 +194,9 @@
         
     } else {
         
-//        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
-//        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
-//        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
+        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
+        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
+        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
         
 //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //            NSData *pageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[page]]];
@@ -203,14 +204,14 @@
 //                self.centerImageView.image = [UIImage imageWithData:pageData];
 //            });
 //        });
-//        
+//
 //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //            NSData *preData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[pre]]];
 //            dispatch_async(dispatch_get_main_queue(), ^{
 //                self.leftImageView.image = [UIImage imageWithData:preData];
 //            });
 //        });
-//        
+//
 //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //            NSData *lastData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[last]]];
 //            dispatch_async(dispatch_get_main_queue(), ^{
