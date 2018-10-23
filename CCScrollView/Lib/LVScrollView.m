@@ -27,7 +27,6 @@
  */
 
 #import "LVScrollView.h"
-#import "SDWebImage/SDWebImage/UIImageView+WebCache.h"
 
 @interface LVScrollView () <UIScrollViewDelegate>
 {
@@ -194,9 +193,9 @@
         
     } else {
         
-        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
-        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
-        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
+//        [self.centerImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[page]] placeholderImage:self.placeHoldImage];
+//        [self.leftImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[pre]]  placeholderImage:self.placeHoldImage];
+//        [self.rightImageView sd_setImageWithURL:[NSURL URLWithString:self.imageArr[last]] placeholderImage:self.placeHoldImage];
         
 //        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 //            NSData *pageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageArr[page]]];
